@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>BOOKS</title>
+</head>
+
+<body>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Book</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in books %}
+                <br>
+                <tr>
+                    <td><img style="height: 100px;" src="{{book.image.url}}" alt="{{book.title}}"></td>
+                    <td>{{book.title}}</td>
+                    <td>{{book.author}}</td>
+                    <td>{{book.category}}</td>
+                    <td>{{book.price}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <hr>
+    </div>
+</body>
+
+</html>
