@@ -5,6 +5,8 @@
 </head>
 
 <body>
+    {% load cache %}
+    {% cache 900 books %}
     <div class="container">
         <table class="table">
             <thead>
@@ -31,6 +33,7 @@
         </table>
         <hr>
     </div>
+    {%endcache %}
 </body>
 
 </html>
